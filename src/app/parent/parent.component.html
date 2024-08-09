@@ -1,0 +1,18 @@
+<h1 align="center">Parent</h1>
+<!--<label for="inputtext">Enter the Text:</label>
+<input type="text" [(ngModel)]="Pname" />
+<p>{{message}}</p>-->
+<div class="container">
+  <button (click)="filterBy('color')">Colors</button><br /><br />
+
+  <button (click)="filterBy('fruit')">Fruits</button><br /><br />
+  <button (click)="filterBy('animal')">Animals</button><br /><br />
+</div>
+<div class="output">
+  <span *ngIf="selectedItem">{{ selectedItem.name }}</span>
+</div>
+<hr />
+<app-child [items]="filteredItems"
+           (selectedItemEmitter)="selectItem($event)"></app-child>
+
+<!--<app-child [Cname]="Pname" (sendmsgemitter)="receivemsg($event)"></app-child>-->

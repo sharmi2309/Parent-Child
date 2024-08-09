@@ -1,0 +1,13 @@
+<!--<div>
+  
+  <p>Hello! {{Cname}}</p>
+  <label for="input">Enter the text : </label>
+  <input type="text" (input)="sendmessage($event)" />
+</div>-->
+<h1 align="center">Child</h1>
+<div class="child-container">
+  <div class="item" *ngFor="let item of items" (click)="selectItem(item)">
+    {{ item.name }}
+  </div>
+</div>
+
